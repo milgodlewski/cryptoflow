@@ -1,0 +1,23 @@
+{
+  "applications": "*",
+  "changelogDate": "20231011154415",
+  "entityTableName": "exchange",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "Exchange",
+  "relationships": [
+    {
+      "otherEntityName": "currencyPair",
+      "otherEntityRelationshipName": "exchanges",
+      "relationshipName": "currencyPairs",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

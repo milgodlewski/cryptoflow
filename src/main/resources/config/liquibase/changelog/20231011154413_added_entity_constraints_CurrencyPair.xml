@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity CurrencyPair.
+    -->
+    <changeSet id="20231011154413-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="currency_pair_id"
+                                 baseTableName="rel_currency_pair__exchanges"
+                                 constraintName="fk_rel_currency_pair__exchanges__currency_pair_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="currency_pair"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="exchanges_id"
+                                 baseTableName="rel_currency_pair__exchanges"
+                                 constraintName="fk_rel_currency_pair__exchanges__exchanges_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="exchange"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="currency_pair_id"
+                                 baseTableName="rel_currency_pair__buy_orders"
+                                 constraintName="fk_rel_currency_pair__buy_orders__currency_pair_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="currency_pair"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="buy_orders_id"
+                                 baseTableName="rel_currency_pair__buy_orders"
+                                 constraintName="fk_rel_currency_pair__buy_orders__buy_orders_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="market_order"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="currency_pair_id"
+                                 baseTableName="rel_currency_pair__sell_orders"
+                                 constraintName="fk_rel_currency_pair__sell_orders__currency_pair_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="currency_pair"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="sell_orders_id"
+                                 baseTableName="rel_currency_pair__sell_orders"
+                                 constraintName="fk_rel_currency_pair__sell_orders__sell_orders_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="market_order"
+                                 />
+    </changeSet>
+</databaseChangeLog>

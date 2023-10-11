@@ -1,0 +1,47 @@
+{
+  "applications": "*",
+  "changelogDate": "20231011154413",
+  "entityTableName": "currency_pair",
+  "fields": [
+    {
+      "fieldName": "baseCurrency",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "targetCurrency",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "exchangeRate",
+      "fieldType": "Double",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "CurrencyPair",
+  "relationships": [
+    {
+      "otherEntityName": "exchange",
+      "otherEntityRelationshipName": "currencyPairs",
+      "relationshipName": "exchanges",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "marketOrder",
+      "otherEntityRelationshipName": "buyCurrencyPairs",
+      "relationshipName": "buyOrders",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "marketOrder",
+      "otherEntityRelationshipName": "sellCurrencyPairs",
+      "relationshipName": "sellOrders",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

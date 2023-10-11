@@ -1,6 +1,5 @@
 package com.ncryptoflow;
 
-import com.ncryptoflow.NcryptoflowApp;
 import com.ncryptoflow.config.AsyncSyncConfiguration;
 import com.ncryptoflow.config.EmbeddedSQL;
 import java.lang.annotation.ElementType;

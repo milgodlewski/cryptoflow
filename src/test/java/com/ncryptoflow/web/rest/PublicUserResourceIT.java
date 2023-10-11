@@ -3,7 +3,6 @@ package com.ncryptoflow.web.rest;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import com.ncryptoflow.IntegrationTest;
-import com.ncryptoflow.config.Constants;
 import com.ncryptoflow.domain.User;
 import com.ncryptoflow.repository.EntityManager;
 import com.ncryptoflow.repository.UserRepository;

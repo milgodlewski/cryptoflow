@@ -1,0 +1,30 @@
+{
+  "applications": "*",
+  "changelogDate": "20231011154414",
+  "entityTableName": "currency_pair_mapping",
+  "fields": [
+    {
+      "fieldName": "baseCurrency",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "targetCurrency",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "sourceExchange",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "targetExchange",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "CurrencyPairMapping",
+  "relationships": [],
+  "searchEngine": "no"
+}

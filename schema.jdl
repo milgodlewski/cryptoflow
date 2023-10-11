@@ -1,0 +1,45 @@
+entity Exchange {
+  name String required
+  // Dodaj inne pola konfiguracyjne giełdy
+}
+
+entity CurrencyPair {
+  baseCurrency String required
+  targetCurrency String required
+  exchangeRate Double required
+}
+
+enum OrderType {
+  BUY, SELL
+}
+
+entity MarketOrder {
+  type OrderType required
+  price Double required
+  amount Double required
+}
+
+relationship ManyToMany {
+  CurrencyPair{exchanges} to Exchange{currencyPairs}
+  CurrencyPair{buyOrders} to MarketOrder{buyCurrencyPairs}
+  CurrencyPair{sellOrders} to MarketOrder{sellCurrencyPairs}
+}
+
+entity CurrencyPairMapping {
+  baseCurrency String required
+  targetCurrency String required
+  sourceExchange String required
+  targetExchange String required
+}
+
+entity ArbitrageOpportunity {
+  baseCurrency String required
+  targetCurrency String required
+  sourceExchange String required
+  targetExchange String required
+  opportunityPercentage Double
+}
+
+entity AppSettings {
+  // Dodaj ustawienia aplikacji, jeśli to konieczne
+}

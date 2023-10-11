@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20231011154416",
+  "entityTableName": "market_order",
+  "fields": [
+    {
+      "fieldName": "type",
+      "fieldType": "OrderType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "BUY,SELL"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Double",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "Double",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "MarketOrder",
+  "relationships": [
+    {
+      "otherEntityName": "currencyPair",
+      "otherEntityRelationshipName": "buyOrders",
+      "relationshipName": "buyCurrencyPairs",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "currencyPair",
+      "otherEntityRelationshipName": "sellOrders",
+      "relationshipName": "sellCurrencyPairs",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

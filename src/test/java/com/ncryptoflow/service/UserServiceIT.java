@@ -6,7 +6,6 @@ import com.ncryptoflow.IntegrationTest;
 import com.ncryptoflow.config.Constants;
 import com.ncryptoflow.domain.User;
 import com.ncryptoflow.repository.UserRepository;
-import com.ncryptoflow.service.dto.AdminUserDTO;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
@@ -17,7 +16,6 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
 import tech.jhipster.security.RandomUtil;
 
 /**

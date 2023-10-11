@@ -12,7 +12,6 @@ import com.ncryptoflow.security.AuthoritiesConstants;
 import com.ncryptoflow.service.UserService;
 import com.ncryptoflow.service.dto.AdminUserDTO;
 import com.ncryptoflow.service.dto.PasswordChangeDTO;
-import com.ncryptoflow.service.dto.UserDTO;
 import com.ncryptoflow.web.rest.vm.KeyAndPasswordVM;
 import com.ncryptoflow.web.rest.vm.ManagedUserVM;
 import java.time.Instant;

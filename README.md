@@ -1,6 +1,8 @@
-# ncryptoflow
+# nCryptoFlow
 
-This application was generated using JHipster 8.0.0-beta.2, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v8.0.0-beta.2](https://www.jhipster.tech/documentation-archive/v8.0.0-beta.2).
+## Created for fun,
+
+to show what I can do with half of a workday and maybe in some future projects. App will fetch data from crypto exchanges, map pairs and compare to find arbitrage.
 
 ## Project Structure
 
